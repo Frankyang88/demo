@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <script>
+    	    var fruits = ["hello world","demo"];
+    	    
+					window.onload = function () {
+					    
+					      var addvalue = document.getElementById("add");
+						    addvalue.onclick = function () {
+						            var list = document.getElementById("listbox");
+						            
+						            for (var i = 0; i < list.length; i++) {
+						                if (list.options[i].selected) {
+						                    //alert(list.options[i].value);
+						                    
+						                    fruits[fruits.length]=(list.options[i].value);
+																document.getElementById("demo").innerHTML = fruits.toString();
+						                }
+						            }
+						        
+						    };
+		
+					};
+    </script>
+    </head>
+
+    <body>
+			<select id = "listbox" >
+		  <option value="volvo">Volvo</option>
+		  <option value="saab">Saab</option>
+		  <option value="opel">Opel</option>
+		  <option value="audi">Audi</option>
+		</select>
+    <input type="button" id="add" value="add" />
+   <p id="demo"></p>
+
+    </body>
+    </html> 
